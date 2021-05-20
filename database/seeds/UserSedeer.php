@@ -17,7 +17,7 @@ class UserSedeer extends Seeder
             'name' => 'Nadya',
             'email' => 'nadya@gmail.com',
             'password' => Hash::make('password'),
-            'address' => 'Bekasi,Jawa Barat',
+            'alamat' => 'Bekasi,Jawa Barat',
             'phone' => '082124373887'
         ]);
         $admin->assignRole('admin');
@@ -26,7 +26,7 @@ class UserSedeer extends Seeder
             'name' => 'Adam',
             'email' => 'adam@gmail.com',
             'password' => Hash::make('password'),
-            'address' => 'Bekasi,Jawa Barat',
+            'alamat' => 'Bekasi,Jawa Barat',
             'phone' => '082124373887'
         ]);
         $user->assignRole('user');

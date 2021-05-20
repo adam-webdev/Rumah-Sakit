@@ -9,7 +9,8 @@
     <meta name="author" content="">
 
     <title>Beranda</title>
-
+    
+    <link href="{{ asset('asset/vendor/select2/dist/css/select2.min.css')}}" rel="stylesheet">
     <link href="{{ asset('asset/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -27,69 +28,68 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar" style="background: linear-gradient(to bottom, #0052d4, #4364f7, #6fb1fc);">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-                <div class="sidebar-brand-icon rotate-n-0">
-                    <img src="{{asset('asset/img/logo_ubsi.png')}}" width="60">
+                <div class="sidebar-brand-icon rotate-n-0 mt-4">
+                    <img src="{{asset('asset/img/logo_ubsi.png')}}" width="60" height="60" style="border-radius:50%; object-fit:cover" >
                 </div>
-                <div class="sidebar-brand-text mx-2">Pemrograman Akuntansi II</div>
+                <div class="sidebar-brand-text mx-2">RS Kebalen</div>
             </a>
 
             <!-- Divider -->
-            <hr class="sidebar-divider my-0">
+            <hr class="sidebar-divider my-0 mt-4">
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('dashboard.index')}}">
+                    <i class="fa fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder-open"></i>
-                    <span>Menu Utama 1</span>
+                    <span>Data Master</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 1</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 2</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 3</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 4</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 5</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="{{route('pasien.index')}}"> Pasien</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="{{route('dokter.index')}}"> Dokter</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="{{route('ruangan.index')}}"> Ruangan</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="{{route('obat.index')}}"> Obat</a>
+                        <a class="collapse-item fas fa-arrow-circle-right" href="{{route('supplier.index')}}"> Supplier</a>
                     </div>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages1"
-                    aria-expanded="true" aria-controls="collapsePages1">
-                    <i class="fas fa-fw fa-folder-open"></i>
-                    <span>Menu Utama 2</span>
-                </a>
-                <div id="collapsePages1" class="collapse" aria-labelledby="headingPages"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 1</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 2</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 3</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 4</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="#"> Sub Menu 5</a>
-                    </div>
-                </div>
-            </li>
+           
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Menu Utama 3</span></a>
+                <a class="nav-link" href="{{route('transaksi.index')}}">
+                    <i class="fas fa-money-check"></i>
+                    <span>Transaksi</span></a>
             </li>
-
             <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-archive"></i>
-                    <span>Menu Utama 4</span></a>
+                <a class="nav-link" href="{{route('rawatinap.index')}}">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Rawat Inap</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('laporan.index')}}">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Laporan</span></a>
+            </li>
+{{-- 
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('user.index')}}">
+                    <i class="fas fa-fw fa-archive"></i>
+                    <span>User</span></a>
+            </li> --}}
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -119,11 +119,7 @@
                     <!-- Topbar Search -->
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <div class="input-group-append">
-                                <h4>Sistem Informasi Akuntansi PT. XYZ</h4>
-                            </div>
-                        </div>
+                                <p>Sistem Informasi Manajemen Rumah Sakit Kebalen</p>
                     </form>
 
                     <!-- Topbar Navbar -->
@@ -196,7 +192,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Create By: Your Name<br>Copyright &copy; Your Website 2020</span>
+                        <span>Create By: Nadya dkk<br>Copyright &copy; 2021   </span>
                     </div>
                 </div>
             </footer>
@@ -258,6 +254,8 @@
     <script src="asset/js/demo/chart-area-demo.js"></script>
     <script src="asset/js/demo/chart-pie-demo.js"></script>
     <script src="asset/js/demo/datatables-demo.js"></script>
+    <script src="{{asset('asset/vendor/select2/dist/js/select2.min.js')}}"></script>
+  @yield('scripts')
 </body>
 
 </html>
