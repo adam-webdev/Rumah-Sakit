@@ -72,13 +72,19 @@
                     <i class="fas fa-fw fa-table"></i>
                     <span>Rawat Inap</span></a>
             </li>
-            @role('manager')
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="{{route('transaksi.index')}}">
                     <i class="fas fa-money-check"></i>
                     <span>Transaksi</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('user.index')}}">
+                    <i class="fas fa-money-check"></i>
+                    <span>User</span></a>
+            </li>
+
+            @role('manager')
             <li class="nav-item">
                 <a class="nav-link" href="{{route('laporan.index')}}">
                     <i class="fas fa-money-check-alt"></i>

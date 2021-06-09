@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::middleware('auth')->group(function(){
+    Route::resource( '/user' , 'UserController' ); 
+    Route::get('/user/hapus/{kode}','UserController@destroy');
     Route::get('/home', 'HomeController@index')->name('home');
     // Route::resource('/user','userController');
     // Route::get('user/hapus/{id}','UserController@delete');
@@ -39,13 +41,14 @@ Route::middleware('auth')->group(function(){
     Route::resource('/rawatinap','RawatinapController');
     Route::get('rawatinap/hapus/{id}','RawatinapController@destroy');
     Route::get('/dashboard','DashboardController@index')->name('dashboard.index');
+    Route::get('/transaksi/hapus/{kode}','TransaksiController@destroy');
+    Route::resource( '/transaksi' , 'TransaksiController' );
+    Route::get('/transaksi/cetak/{id}' , 'TransaksiController@cetak')->name('cetak');
 });
 Route::middleware(['auth','role:manager'])->group(function(){
     Route::resource('/laporan','LaporanController');
     Route::get('laporan/hapus/{id}','LaporanController@destroy');
     Route::post('laporan/cari','LaporanController@cari');
     Route::get('laporan/cari','LaporanController@cari');
-    Route::get('/transaksi/hapus/{kode}','TransaksiController@destroy');
-    Route::resource( '/transaksi' , 'TransaksiController' );
-    Route::get('/transaksi/cetak/{id}' , 'TransaksiController@cetak')->name('cetak');
+   
 });

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -13,7 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $user = User::all();         
+        return view( 'user.user' , ['user'  => $user]); 
     }
 
     /**
@@ -23,7 +25,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.input'); 
     }
 
     /**
@@ -34,7 +36,19 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pass=$request->get('passw');         
+        $kpass=$request->get('kpassw');         
+        if ($pass == $kpass){             
+            $save_user = new User;                     
+            $save_user->email=$request->get('email');             
+            $save_user->password=\Hash::make($request->get( 'passw' ));             
+            // $save_user->roles=json_encode($request->get('roles'));             
+            $save_user->alamat=$request->get('alamat');             
+            $save_user->telephone=$request->get('tlp');             
+            $save_user->status=$request->get('status');             
+            $save_user->save();         
+        }                
+            return redirect()->route('user.index'); 
     }
 
     /**
@@ -56,7 +70,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user_edit = User::findOrFail($id);         
+        return view( 'user.edit' , ['user'  => $user_edit]); 
     }
 
     /**
@@ -68,7 +83,29 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $pass=$request->get('passw');         
+        $kpass=$request->get('kpassw');                
+        $user = User::findOrFail($id);                     
+        if($request->get('ubahpass') == 'ubah'){             
+            if ($pass == $kpass){                                
+                $user->email=$request->get('email');                 
+                // $user->roles=json_encode($request->get('roles'));                 
+                $user->address=$request->get('alamat');                 
+                $user->phone=$request->get('tlp');                 
+                $user->status=$request->get('status');                 
+                $user->password=\Hash::make($request->get( 'passw' ));                 
+                $user->save();                 
+            }         
+        }else{             
+            $user->email=$request->get('email');             
+            $user->username=$request->get('usname');                     
+            $user->roles=json_encode($request->get('roles'));             
+            $user->address=$request->get('alamat');             
+            $user->phone=$request->get('tlp');             
+            $user->status=$request->get('status');             
+            $user->save();
+        } 
+        return redirect()->route( 'user.index'); 
     }
 
     /**
@@ -79,6 +116,9 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->delete();
+
+        return redirect()->route( 'user.index');
     }
 }

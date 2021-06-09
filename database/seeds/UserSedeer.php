@@ -14,8 +14,8 @@ class UserSedeer extends Seeder
     public function run()
     {
         $admin = User::create([
-            'name' => 'Nadya',
-            'email' => 'nadya@gmail.com',
+            'name' => 'farhan',
+            'email' => 'farhan@gmail.com',
             'password' => Hash::make('password'),
             'alamat' => 'Bekasi,Jawa Barat',
             'telephone' => '082124373887'
@@ -23,8 +23,8 @@ class UserSedeer extends Seeder
         $admin->assignRole('manager');
 
         $user = User::create([
-            'name' => 'Adam',
-            'email' => 'adam@gmail.com',
+            'name' => 'santa',
+            'email' => 'santa@gmail.com',
             'password' => Hash::make('password'),
             'alamat' => 'Bekasi,Jawa Barat',
             'telephone' => '082124373887'

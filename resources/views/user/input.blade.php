@@ -6,13 +6,14 @@
   <fieldset>     
     <legend>Input Data Pengguna</legend>     
     <div class="form-group row">       
-      <div class="col-md-5">         
-        <label for="usname">Username</label>         
-        <input id="usname" type="text" name="usname" class="form-control" required>       
-      </div>       
+     
       <div class="col-md-5">         
         <label for="email">Email</label>         
         <input id="email" type="email" name="email" class="form-control" required>       
+      </div> 
+      <div class="col-md-5">         
+        <label for="tlp">Nomor Telpon</label>         
+        <input id="tlp" type="text" name="tlp" class="form-control" required>       
       </div> 
     </div>     
     <div class="form-group row">         
@@ -30,29 +31,19 @@
         <label for="roles">Roles</label>         
         <select id="roles" name="roles[]" class="form-control" required>           
           <option value="">--Pilih Roles--</option>           
-          <option value="ADMIN">Admin</option>           
-          <option value="STAFF">Staff</option>         
+          <option value="admin">Admin</option>           
+          <option value="manager">Manager</option>         
         </select>       
       </div>  
-      <div class="col-md-5">         
-        <label for="status">Status</label>         
-        <select id="status" name="status" class="form-control" required>           
-          <option value="">--Pilih Status--</option>           
-          <option value="ACTIVE">AKTIF</option>           
-          <option value="INACTIVE">NON AKTIF</option>         
-        </select>       
-      </div>        
+       
        
     </div>     
         
     <div class="form-group row">         
-      <div class="col-md-5">         
-        <label for="tlp">Nomor Telpon</label>         
-        <input id="tlp" type="text" name="tlp" class="form-control" required>       
-      </div> 
+     
       <div class="col-md-5">         
         <label for="alamat">Alamat</label>         
-        <textarea id="alamat" name="alamat" class="form-control" required></textarea>       
+        <textarea id="alamat" name="alamat" class="form-control" required cols="30" rows="5%"></textarea>       
       </div>          
     </div>     
       <input type="submit" class="btn btn-success btn-send" value="Simpan" >       
