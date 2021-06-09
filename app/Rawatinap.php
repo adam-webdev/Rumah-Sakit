@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Rawatinap extends Model
 {
     protected $table = 'rawatinaps';
+    protected $fillable = ['pasien_id','ruangan_id','dokter_id','qty','qty_ruangan'];
 
     public function obat(){
         return $this->belongsToMany(Obat::class);

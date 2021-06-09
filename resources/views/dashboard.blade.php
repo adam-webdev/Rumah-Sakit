@@ -6,6 +6,7 @@
     <div class="col-md-3">
     <a class="text-white" href="{{route('dokter.index')}}" style="text-decoration:none;">
         <div class="card p-4 text-white" style="background: linear-gradient(to right, #ff0066 0%, #ff0000 100%);">
+            <i class="fa fa-user-nurse fa-2x" aria-hidden="true"></i>
             <div class="row">
                 <h4 class="mr-4">Dokter</h4>
                 <h1>{{$dokter}}</h1>
@@ -38,6 +39,7 @@
     <div class="col-md-3">
         <a class="text-white" href="{{route('ruangan.index')}}" style="text-decoration:none;">
         <div class="card p-4 text-white" style="background: linear-gradient(to top left, #ff5050 0%, #ff9933 100%);">
+            <i class="fa fa-hospital fa-2x" aria-hidden="true"></i>
             <div class="row">
                 <h4 class="mr-4">Ruangan</h4>
                 <h1>{{$ruangan}}</h1>
@@ -47,10 +49,10 @@
     </div>
 </div>
 <div class="row mt-4">
-
     <div class="col-md-3">
         <a class="text-white" href="{{route('obat.index')}}" style="text-decoration:none;">
         <div class="card p-4 text-white" style="background: linear-gradient(to top left, #ff6699 0%, #ff0000 100%);">
+            <i class="fa fa-pills fa-2x" aria-hidden="true"></i>
             <div class="row">
                 <h4 class="mr-4">Obat</h4>
                 <h1>{{$obat}}</h1>
@@ -61,6 +63,7 @@
     <div class="col-md-3">
         <a class="text-white" href="{{route('rawatinap.index')}}" style="text-decoration:none;">
         <div class="card p-4 text-white" style=" background: linear-gradient(to top right, #ff0066 0%, #ff0000 100%);">
+            <i class="fa fa-fw fa-table fa-2x" aria-hidden="true"></i>
             <div class="row">
                 <h4 class="mr-4">Rawat Inap</h4>
                 <h1>{{$rawatinap}}</h1>
@@ -71,6 +74,7 @@
     <div class="col-md-3">
         <a class="text-white" href="{{route('transaksi.index')}}" style="text-decoration:none;">
         <div class="card p-4 text-white" style="background: linear-gradient(to right, #ff3399 0%, #ff3300 100%);">
+            <i class="fa fa-money-check fa-2x" aria-hidden="true"></i>
             <div class="row">
                 <h4 class="mr-4">Transaksi</h4>
                 <h1>{{$transaksi}}</h1>

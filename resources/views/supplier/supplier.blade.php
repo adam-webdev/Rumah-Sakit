@@ -39,7 +39,7 @@
                     <input type="number" name="qty" class="form-control" id="qty">
                 </div>
                 <div class="form-group">
-                    <label for="telepon">No Handphone :</label>
+                    <label for="telepon">No HP :</label>
                     <input type="number" name="telepon" class="form-control" id="telepon">
                 </div>
                 <div class="form-group">
@@ -69,9 +69,9 @@
                     <tr align="center">
                         <th>Nama Supplier</th>
                         <th>Produk</th>
-                        <th>Harga Produk</th>
+                        <th>Harga</th>
                         <th>Qty</th>
-                        <th>No Handphone</th>
+                        <th>No HP</th>
                         <th>Alamat</th>
                         <th>Aksi</th>
                     </tr>

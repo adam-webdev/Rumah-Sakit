@@ -58,16 +58,21 @@
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item fas fa-arrow-circle-right" href="{{route('pasien.index')}}"> Pasien</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="{{route('dokter.index')}}"> Dokter</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="{{route('ruangan.index')}}"> Ruangan</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="{{route('obat.index')}}"> Obat</a>
-                        <a class="collapse-item fas fa-arrow-circle-right" href="{{route('supplier.index')}}"> Supplier</a>
+                        <a class="collapse-item fas fa-fa fa-users" href="{{route('pasien.index')}}"> Pasien</a>
+                        <a class="collapse-item fas fa-user-nurse" href="{{route('dokter.index')}}"> Dokter</a>
+                        <a class="collapse-item fas fa fa-hospital" href="{{route('ruangan.index')}}"> Ruangan</a>
+                        <a class="collapse-item fas fa-fa fa-pills" href="{{route('obat.index')}}"> Obat</a>
+                        <a class="collapse-item fas fa-building" href="{{route('supplier.index')}}"> Supplier</a>
                     </div>
                 </div>
             </li>
            
-
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('rawatinap.index')}}">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Rawat Inap</span></a>
+            </li>
+            @role('manager')
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="{{route('transaksi.index')}}">
@@ -75,15 +80,11 @@
                     <span>Transaksi</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('rawatinap.index')}}">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Rawat Inap</span></a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="{{route('laporan.index')}}">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-money-check-alt"></i>
                     <span>Laporan</span></a>
             </li>
+            @endrole
 {{-- 
             <li class="nav-item">
                 <a class="nav-link" href="{{route('user.index')}}">

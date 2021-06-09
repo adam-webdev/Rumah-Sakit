@@ -75,7 +75,7 @@
                         <th>Spesialis</th>
                         <th>Jenis Kelamin</th>
                         <th>Tarif</th>
-                        <th>No Handphone</th>
+                        <th>No HP</th>
                         <th>Alamat</th>
                         <th>Aksi</th>
                     </tr>

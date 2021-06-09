@@ -15,19 +15,34 @@ class RawatinapController extends Controller
             'obat' => Obat::get(),
             'ruangan' => Ruangan::get(),
             'pasien' => Pasien::get(),
-            'rawatinap' => Rawatinap::with('dokter','ruangan','pasien','obat')->get() 
+            'rawatinap' => Rawatinap::with('dokter','ruangan','pasien','obat')->get(),
+            'data_rawatinap' => new Rawatinap() 
         ];      
         return view('rawatinap.rawatinap' ,$data);
     }
 
     public function store(Request $request)
     {
-        $rawatinap = new Rawatinap; 
-        $rawatinap->pasien_id = $request->nama;
-        $rawatinap->dokter_id = $request->nama_dokter;
-        $rawatinap->ruangan_id = $request->nama_ruangan;
-        $rawatinap->save();
-        $rawatinap->obat()->attach($request->nama_obat);
+       
+        $qty = 1 ;
+        $data = [
+            'pasien_id' => $request->pasien_id,
+            'dokter_id' =>  $request->dokter_id,
+            'ruangan_id' => $request->ruangan_id,
+            'qty'       => $qty,
+            'qty_ruangan' => $qty
+        ];
+        $rawatinap = Rawatinap::create($data);
+        // $rawatinap = Rawatinap::all();
+        $rawatinap->obat()->attach($request->obat_id);
+        // $rawatinap = new Rawatinap; 
+        // $rawatinap->pasien_id = $request->nama;
+        // $rawatinap->dokter_id = $request->nama_dokter;
+        // $rawatinap->ruangan_id = $request->nama_ruangan;
+        // $rawatinap->qty = $qty;
+        // $rawatinap->qty_ruangan = $qty;
+        // $rawatinap->save();
+        // $rawatinap->obats()->attach($request->nama_obat[]);
         Alert::success('Tersimpan','Data Berhasil Disimpan');
         return redirect()->route( 'rawatinap.index' ); 
     }

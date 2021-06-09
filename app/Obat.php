@@ -11,7 +11,7 @@ class Obat extends Model
     {
         return $this->belongsTo(Supplier::class);
     }
-    public function rawatinap(){
+    public function rawatinaps(){
         return $this->belongsToMany(Rawatinap::class);
     }
 }

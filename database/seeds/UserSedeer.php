@@ -18,17 +18,17 @@ class UserSedeer extends Seeder
             'email' => 'nadya@gmail.com',
             'password' => Hash::make('password'),
             'alamat' => 'Bekasi,Jawa Barat',
-            'phone' => '082124373887'
+            'telephone' => '082124373887'
         ]);
-        $admin->assignRole('admin');
+        $admin->assignRole('manager');
 
         $user = User::create([
             'name' => 'Adam',
             'email' => 'adam@gmail.com',
             'password' => Hash::make('password'),
             'alamat' => 'Bekasi,Jawa Barat',
-            'phone' => '082124373887'
+            'telephone' => '082124373887'
         ]);
-        $user->assignRole('user');
+        $user->assignRole('admin');
     }
 }

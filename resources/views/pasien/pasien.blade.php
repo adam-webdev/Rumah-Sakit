@@ -64,9 +64,9 @@
                     <tr align="center">
                         <th>Nama Pasien</th>
                         <th>Jenis Kelamin</th>
-                        <th>telephone</th>
-                        <th>riwayat_penyakit/th>
-                        <th>alamat</th>
+                        <th>No HP</th>
+                        <th>Riwayat Penyakit</th>
+                        <th>Alamat</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>

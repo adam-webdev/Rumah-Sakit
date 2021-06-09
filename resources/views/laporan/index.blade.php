@@ -26,7 +26,7 @@
             <input type="date" name="akhir" id="akhir" class="form-control"> 
         </div>
         <div class="col-md-3">
-            <button type="submit" class="btn btn-primary mt-4" style="margin-top:32px !important;">Cari</button>
+            <button type="submit" class="btn btn-primary mt-4" style="margin-top:32px !important;"><i class="fas fa-print mr-2"></i>Cetak</button>
         </div>
         </div>
     </div>
