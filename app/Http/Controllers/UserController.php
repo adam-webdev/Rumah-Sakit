@@ -40,12 +40,11 @@ class UserController extends Controller
         $kpass=$request->get('kpassw');         
         if ($pass == $kpass){             
             $save_user = new User;                     
+            $save_user->name=$request->get('name');             
             $save_user->email=$request->get('email');             
             $save_user->password=\Hash::make($request->get( 'passw' ));             
-            // $save_user->roles=json_encode($request->get('roles'));             
             $save_user->alamat=$request->get('alamat');             
             $save_user->telephone=$request->get('tlp');             
-            $save_user->status=$request->get('status');             
             $save_user->save();         
         }                
             return redirect()->route('user.index'); 
@@ -87,22 +86,19 @@ class UserController extends Controller
         $kpass=$request->get('kpassw');                
         $user = User::findOrFail($id);                     
         if($request->get('ubahpass') == 'ubah'){             
-            if ($pass == $kpass){                                
+            if ($pass == $kpass){       
+            $user->name=$request->get('name');             
                 $user->email=$request->get('email');                 
-                // $user->roles=json_encode($request->get('roles'));                 
                 $user->address=$request->get('alamat');                 
                 $user->phone=$request->get('tlp');                 
-                $user->status=$request->get('status');                 
                 $user->password=\Hash::make($request->get( 'passw' ));                 
                 $user->save();                 
             }         
         }else{             
-            $user->email=$request->get('email');             
-            $user->username=$request->get('usname');                     
-            $user->roles=json_encode($request->get('roles'));             
+            $user->email=$request->get('email');
+            $user->name=$request->get('name');             
             $user->address=$request->get('alamat');             
             $user->phone=$request->get('tlp');             
-            $user->status=$request->get('status');             
             $user->save();
         } 
         return redirect()->route( 'user.index'); 
