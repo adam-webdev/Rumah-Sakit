@@ -89,16 +89,16 @@ class UserController extends Controller
             if ($pass == $kpass){       
             $user->name=$request->get('name');             
                 $user->email=$request->get('email');                 
-                $user->address=$request->get('alamat');                 
-                $user->phone=$request->get('tlp');                 
+                $user->alamat=$request->get('alamat');                 
+                $user->telephone=$request->get('tlp');                 
                 $user->password=\Hash::make($request->get( 'passw' ));                 
                 $user->save();                 
             }         
         }else{             
             $user->email=$request->get('email');
             $user->name=$request->get('name');             
-            $user->address=$request->get('alamat');             
-            $user->phone=$request->get('tlp');             
+            $user->alamat=$request->get('alamat');             
+            $user->telephone=$request->get('tlp');             
             $user->save();
         } 
         return redirect()->route( 'user.index'); 

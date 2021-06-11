@@ -9,7 +9,7 @@
      
       <div class="col-md-5">         
         <label for="email">Nama</label>         
-        <input id="email" type="text" name="name" class="form-control" required>       
+        <input id="email" type="text" name="name" class="form-control" required autocomplete="off">       
       </div> 
       <div class="col-md-5">         
         <label for="email">Email</label>         
@@ -20,7 +20,7 @@
     <div class="form-group row">         
       <div class="col-md-5">         
         <label for="passw">Password</label>         
-        <input id="passw" type="password" name="passw" class="form-control" required>       
+        <input id="passw" type="password" name="passw" class="form-control" required autocomplete="off">       
       </div>       
       <div class="col-md-5">         
         <label for="kpassw">Konfirm Password</label>         
