@@ -15,8 +15,8 @@ class UserSedeer extends Seeder
     {
         $admin = User::create([
             'name' => 'farhan',
-            'email' => 'ada@gmail.com',
-            'password' => Hash::make('password'),
+            'email' => 'farhan@gmail.com',
+            'password' => bcrypt('password'),
             'alamat' => 'Bekasi,Jawa Barat',
             'telephone' => '082124373887'
         ]);
@@ -24,8 +24,8 @@ class UserSedeer extends Seeder
 
         $user = User::create([
             'name' => 'santa',
-            'email' => 'idi@gmail.com',
-            'password' => Hash::make('password'),
+            'email' => 'santa@gmail.com',
+            'password' => bcrypt('password'),
             'alamat' => 'Bekasi,Jawa Barat',
             'telephone' => '082124373887'
         ]);
