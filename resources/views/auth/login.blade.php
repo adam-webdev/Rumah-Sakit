@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Sistem Informasi Manajemen Rumah Sakit Kebalen</title>
+    <title>RS | login</title>
     <!-- Custom fonts for this template-->
     <link href="{{ asset('asset/vendor/fontawesome-
 free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -30,8 +30,8 @@ free/css/all.min.css')}}" rel="stylesheet" type="text/css">
                             <div class="col-lg-20">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Sistem Informasi Manajemen<br> Rumah Sakit Kebalen<br>
-                                            <br><img src="{{ asset('asset/img/logo_ubsi.png')}}" width="160"></h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Sistem Informasi Manajemen<br> Rumah Sakit Bekasi<br>
+                                            <br><img src="{{ asset('asset/img/logo.png')}}" width="160"></h1>
                                     </div>
                                     <form method="POST" action="{{ route('login') }}">
                                         @csrf

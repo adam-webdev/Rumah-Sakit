@@ -28,14 +28,14 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar" style="background: linear-gradient(to bottom, #0052d4, #4364f7, #6fb1fc);">
+        <ul class="navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar" style="background: linear-gradient(to bottom, #caae11, #d3a526, #fac105);">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                 <div class="sidebar-brand-icon rotate-n-0 mt-4">
-                    <img src="{{asset('asset/img/logo_ubsi.png')}}" width="60" height="60" style="border-radius:50%; object-fit:cover" >
+                    <img src="{{asset('asset/img/logo.png')}}" width="60" height="60" style="border-radius:50%; object-fit:cover" >
                 </div>
-                <div class="sidebar-brand-text mx-2">RS Kebalen</div>
+                <div class="sidebar-brand-text mx-2">RS Bekasi</div>
             </a>
 
             <!-- Divider -->
@@ -126,7 +126,7 @@
                     <!-- Topbar Search -->
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                                <p>Sistem Informasi Manajemen Rumah Sakit Kebalen</p>
+                                <p>Sistem Informasi Manajemen Rumah Sakit Bekasi</p>
                     </form>
 
                     <!-- Topbar Navbar -->
@@ -199,7 +199,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Create By: Nadya dkk<br>Copyright &copy; 2021   </span>
+                        <span>Create By: Adam-webdev<br>Copyright &copy; 2021   </span>
                     </div>
                 </div>
             </footer>
